@@ -3,6 +3,8 @@ import './Tweetbox.css'
 import { Avatar, Button } from "@material-ui/core";
 import TwitterLogo from './TwitterLogo.png'
 import db from "./firebase";
+import firebase from 'firebase'
+
 
 function TweetBox() {
 const [tweetMessage,setTweetMessage]=useState('')
@@ -10,13 +12,14 @@ const [tweetImage,setTweetImage]=useState('')
 
 const sendTweet = (e)=>{
 e.preventDefault();
-db.collection("Posts").add({
+db.collection("PostSort").add({
     displayName: "Saksham Jaiswal",
     username: "sakshamjaiswal1",
     verified: true,
     text: tweetMessage,
     image: tweetImage,
-    avatar:TwitterLogo
+    avatar:TwitterLogo,
+    timestamp:firebase.firestore.FieldValue.serverTimestamp()
      ,
   });
   setTweetImage('')
