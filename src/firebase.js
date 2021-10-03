@@ -1,18 +1,23 @@
-import firebase from 'firebase'
+import firebase from "firebase";
 
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-    apiKey: "AIzaSyCiZj8Jesa91QENGXXU2IZNqMQPIpffouc",
-    authDomain: "twitter-clone-f3ad1.firebaseapp.com",
-    projectId: "twitter-clone-f3ad1",
-    storageBucket: "twitter-clone-f3ad1.appspot.com",
-    messagingSenderId: "331569121633",
-    appId: "1:331569121633:web:81296500176a5b74fa5d20",
-    measurementId: "G-3F6L9G2TES"
-  };
+  apiKey: "AIzaSyBKwklB8hvRWl1pr2f-YirvbF94brtNmyI",
 
-  const firebaseApp=firebase.initializeApp(firebaseConfig)
+  authDomain: "twitter-clone-35c93.firebaseapp.com",
+
+  projectId: "twitter-clone-35c93",
+
+  storageBucket: "twitter-clone-35c93.appspot.com",
+
+  messagingSenderId: "90619868425",
+
+  appId: "1:90619868425:web:4228b9431ae809a0138fd8",
+
+  measurementId: "G-9SBT57BSY4",
+};
+
+const firebaseApp = firebase.initializeApp(firebaseConfig);
 const db = firebaseApp.firestore();
-
 
 export default db;
